@@ -1,0 +1,2311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
+<title>Onboarding &amp; Platform Specialist — Training Course | Euphoric Leisure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2f5d8c;
+    --navy-dark: #234870;
+    --navy-light: #3f6fa0;
+    --bg: #f9f9f9;
+    --white: #ffffff;
+    --line: #dde5ef;
+    --text: #2a2a2a;
+    --muted: #6b7280;
+    --soft: #eef3f9;
+    --gold: #b8924e;
+    --shadow: 0 4px 20px rgba(47, 93, 140, 0.08);
+    --shadow-lg: 0 12px 40px rgba(47, 93, 140, 0.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; color: var(--navy); }
+  h1 { font-size: 56px; line-height: 1.05; letter-spacing: -0.5px; }
+  h2 { font-size: 38px; line-height: 1.15; margin-bottom: 16px; }
+  h3 { font-size: 26px; line-height: 1.2; margin-bottom: 12px; font-weight: 500; }
+  h4 { font-size: 20px; line-height: 1.3; margin-bottom: 10px; font-weight: 600; font-family: 'Inter', sans-serif; color: var(--navy); }
+  p { margin-bottom: 14px; color: #444; }
+  a { color: var(--navy); text-decoration: none; }
+
+  /* ===== LAYOUT ===== */
+  .app { display: flex; min-height: 100vh; }
+  .sidebar {
+    width: 320px;
+    background: var(--white);
+    border-right: 1px solid var(--line);
+    padding: 32px 24px;
+    position: fixed;
+    top: 0; bottom: 0; left: 0;
+    overflow-y: auto;
+    z-index: 50;
+  }
+  .main { margin-left: 320px; flex: 1; min-height: 100vh; }
+  .container { max-width: 880px; margin: 0 auto; padding: 64px 56px; }
+
+  /* ===== LOGO / SIDEBAR HEADER ===== */
+  .brand { display: block; margin-bottom: 4px; padding-left: 2px; }
+  .brand-logo { display: block; width: 100%; max-width: 260px; height: auto; }
+  .cert-logo-wrap { display: block; margin: 0 auto 18px; width: 100%; max-width: 360px; height: auto; }
+  .hero-logo { display: block; margin: 0 auto 24px; width: 100%; max-width: 320px; height: auto; filter: invert(1) brightness(1000%); }
+  .sidebar-tag { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin: 22px 0 10px; padding-left: 4px; }
+  .course-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; line-height: 1.2; color: var(--navy); margin-bottom: 20px; padding-left: 4px; font-weight: 500; }
+  .course-title strong { display: block; font-weight: 600; }
+
+  /* ===== PROGRESS ===== */
+  .progress-wrap { padding: 12px 14px; background: var(--soft); border-radius: 10px; margin-bottom: 24px; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 11px; color: var(--navy); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; font-weight: 600; }
+  .progress-bar { height: 6px; background: rgba(47, 93, 140, 0.12); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--navy), var(--navy-light)); width: 0%; transition: width 0.5s ease; border-radius: 3px; }
+
+  /* ===== NAV ===== */
+  .nav-section { margin-bottom: 8px; }
+  .nav-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; border-radius: 8px;
+    cursor: pointer;
+    font-size: 13.5px; font-weight: 500; color: #444;
+    transition: all 0.2s ease;
+    border: none; background: none; width: 100%; text-align: left;
+    position: relative;
+  }
+  .nav-item:hover { background: var(--soft); color: var(--navy); }
+  .nav-item.active { background: var(--navy); color: white; }
+  .nav-item.active .nav-num { background: rgba(255,255,255,0.18); color: white; }
+  .nav-item.completed .nav-num { background: var(--navy); color: white; }
+  .nav-num {
+    width: 24px; height: 24px; flex-shrink: 0;
+    border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+    background: var(--soft); color: var(--navy); font-size: 11px; font-weight: 600;
+  }
+  .nav-sub { padding-left: 36px; }
+  .nav-sub .nav-item { padding: 7px 12px; font-size: 12.5px; font-weight: 400; color: #666; }
+  .nav-sub .nav-item:hover { background: var(--soft); }
+  .nav-sub .nav-item.active { background: var(--soft); color: var(--navy); font-weight: 600; }
+  .nav-check { display: none; margin-left: auto; color: #4caf50; font-size: 14px; }
+  .nav-item.completed .nav-check { display: inline; }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: white;
+    padding: 80px 56px 70px;
+    margin: -64px -56px 48px;
+    border-radius: 0 0 24px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before { content:''; position:absolute; top:-100px; right:-100px; width:280px; height:280px; border-radius:50%; background: rgba(255,255,255,0.04); }
+  .hero::after { content:''; position:absolute; bottom:-60px; left:-60px; width:180px; height:180px; border-radius:50%; background: rgba(255,255,255,0.05); }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-tag {
+    display: inline-block; padding: 6px 14px; background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.25); border-radius: 20px;
+    color: white; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
+    margin-bottom: 22px; font-weight: 500;
+  }
+  .hero h1 { color: white; margin-bottom: 16px; font-weight: 300; }
+  .hero h1 strong { font-weight: 600; display: block; }
+  .hero-sub { color: rgba(255,255,255,0.85); font-size: 17px; max-width: 640px; line-height: 1.6; margin-bottom: 36px; }
+  .hero-meta { display: flex; gap: 40px; flex-wrap: wrap; }
+  .hero-meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .hero-meta-label { font-size: 11px; color: rgba(255,255,255,0.65); letter-spacing: 1.5px; text-transform: uppercase; }
+  .hero-meta-value { font-size: 18px; color: white; font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+
+  /* ===== BLOCKS ===== */
+  .section-eyebrow {
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--navy); font-weight: 600; margin-bottom: 14px;
+  }
+  .lead { font-size: 17px; color: #444; line-height: 1.75; margin-bottom: 28px; padding-left: 22px; border-left: 3px solid var(--navy); }
+  .card {
+    background: white; border: 1px solid var(--line);
+    border-radius: 14px; padding: 28px 32px;
+    margin: 20px 0; box-shadow: var(--shadow);
+  }
+  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 24px 0; }
+  .card-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .icon-card {
+    background: white; border: 1px solid var(--line); border-radius: 12px;
+    padding: 24px; transition: all 0.25s ease;
+  }
+  .icon-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--navy-light); }
+  .icon-card .icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--soft); display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px; color: var(--navy); font-size: 22px;
+  }
+  .icon-card h4 { margin-bottom: 6px; }
+  .icon-card p { font-size: 13.5px; color: var(--muted); margin-bottom: 0; }
+
+  ul.styled, ol.styled { padding-left: 0; list-style: none; margin: 16px 0; }
+  ul.styled li, ol.styled li {
+    padding: 10px 0 10px 28px; position: relative; color: #444; font-size: 14.5px; line-height: 1.6;
+    border-bottom: 1px dashed rgba(47,93,140,0.12);
+  }
+  ul.styled li:last-child, ol.styled li:last-child { border-bottom: none; }
+  ul.styled li::before {
+    content: ''; position: absolute; left: 0; top: 18px;
+    width: 8px; height: 8px; border-radius: 50%; background: var(--navy);
+  }
+  ol.styled { counter-reset: stepcount; }
+  ol.styled li { padding-left: 42px; counter-increment: stepcount; }
+  ol.styled li::before {
+    content: counter(stepcount); position: absolute; left: 0; top: 9px;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--navy); color: white;
+    font-size: 12px; font-weight: 600; font-family: 'Inter', sans-serif;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+
+  .quote-card {
+    background: var(--navy); color: white;
+    border-radius: 14px; padding: 36px 40px;
+    margin: 28px 0; position: relative;
+  }
+  .quote-card::before {
+    content: '"'; position: absolute; top: 8px; left: 22px;
+    font-family: 'Cormorant Garamond', serif; font-size: 80px; line-height: 1;
+    color: rgba(255,255,255,0.2); font-weight: 700;
+  }
+  .quote-card p {
+    color: white; font-family: 'Cormorant Garamond', serif; font-size: 22px;
+    line-height: 1.5; font-style: italic; margin-bottom: 12px; padding-left: 28px;
+  }
+  .quote-attr { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); padding-left: 28px; }
+
+  .callout {
+    background: white; border-left: 4px solid var(--navy);
+    border-radius: 8px; padding: 18px 24px; margin: 22px 0;
+    box-shadow: var(--shadow);
+  }
+  .callout-title { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--navy); font-weight: 700; margin-bottom: 6px; }
+  .callout p { margin: 0; font-size: 14.5px; color: #444; }
+  .callout.warn { border-left-color: #c9802b; }
+  .callout.warn .callout-title { color: #c9802b; }
+  .callout.tip { border-left-color: #2e8a5a; }
+  .callout.tip .callout-title { color: #2e8a5a; }
+
+  /* ===== TABLES ===== */
+  .data-table { width: 100%; border-collapse: collapse; margin: 22px 0; background: white; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); }
+  .data-table thead { background: var(--navy); }
+  .data-table th { padding: 14px 18px; text-align: left; color: white; font-weight: 600; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+  .data-table td { padding: 14px 18px; border-top: 1px solid var(--line); font-size: 14px; color: #333; }
+  .data-table tbody tr:hover { background: var(--soft); }
+  .data-table td.cell-strong { font-weight: 600; color: var(--navy); }
+  .data-table td.cell-num { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--navy); font-weight: 500; }
+
+  /* ===== COMPARE ===== */
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 24px 0; }
+  .compare-card { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+  .compare-card.before { border-top: 4px solid #c9802b; }
+  .compare-card.after { border-top: 4px solid #2e8a5a; }
+  .compare-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; }
+  .compare-card.before .compare-label { color: #c9802b; }
+  .compare-card.after .compare-label { color: #2e8a5a; }
+  .compare-card pre { white-space: pre-wrap; font-family: 'Inter', sans-serif; font-size: 13px; line-height: 1.6; color: #444; background: var(--soft); padding: 14px 16px; border-radius: 8px; max-height: 360px; overflow-y: auto; }
+
+  /* ===== STEP / CHECKLIST ===== */
+  .checklist { background: white; border: 1px solid var(--line); border-radius: 12px; padding: 22px 26px; margin: 18px 0; box-shadow: var(--shadow); }
+  .checklist-title { font-family: 'Inter', sans-serif; color: var(--navy); font-weight: 600; font-size: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+  .checklist-title .step-pill { background: var(--navy); color: white; font-size: 11px; padding: 3px 10px; border-radius: 12px; letter-spacing: 1px; }
+  .checklist ul { list-style: none; padding: 0; }
+  .checklist ul li { position: relative; padding: 7px 0 7px 26px; font-size: 14px; color: #444; border-bottom: 1px dashed rgba(47,93,140,0.1); }
+  .checklist ul li:last-child { border-bottom: none; }
+  .checklist ul li::before {
+    content: '☐'; position: absolute; left: 0; top: 6px; color: var(--navy); font-size: 16px;
+  }
+
+  .placeholder {
+    background: linear-gradient(135deg, #f4f8fc 0%, #eef3f9 100%);
+    border: 2px dashed rgba(47,93,140,0.3);
+    border-radius: 14px; padding: 28px 24px; text-align: center;
+    margin: 22px 0;
+  }
+  .placeholder-icon { font-size: 28px; margin-bottom: 8px; color: var(--navy); }
+  .placeholder-title { font-family: 'Cormorant Garamond', serif; color: var(--navy); font-size: 20px; margin-bottom: 6px; font-weight: 500; }
+  .placeholder-text { color: var(--muted); font-size: 13.5px; max-width: 480px; margin: 0 auto; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px; border-radius: 10px;
+    font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
+    cursor: pointer; transition: all 0.2s ease;
+    border: none;
+  }
+  .btn-primary { background: var(--navy); color: white; }
+  .btn-primary:hover { background: var(--navy-dark); transform: translateY(-1px); box-shadow: var(--shadow); }
+  .btn-secondary { background: white; color: var(--navy); border: 1px solid var(--line); }
+  .btn-secondary:hover { background: var(--soft); border-color: var(--navy); }
+  .btn-ghost { background: transparent; color: var(--navy); }
+  .btn-ghost:hover { background: var(--soft); }
+
+  .nav-buttons { display: flex; justify-content: space-between; gap: 16px; margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+
+  /* ===== QUIZ ===== */
+  .quiz-block {
+    background: white; border-radius: 16px; padding: 36px 40px;
+    margin: 36px 0; box-shadow: var(--shadow); border: 1px solid var(--line);
+  }
+  .quiz-eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+  .quiz-block h3 { color: var(--navy); margin-bottom: 22px; }
+  .quiz-question { margin: 22px 0; }
+  .quiz-q-text { font-weight: 600; color: var(--navy); margin-bottom: 12px; font-size: 15px; }
+  .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+  .quiz-option {
+    padding: 12px 16px; border: 1.5px solid var(--line); border-radius: 8px;
+    cursor: pointer; transition: all 0.2s ease;
+    font-size: 14px; color: #444; background: white;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .quiz-option:hover { border-color: var(--navy-light); background: var(--soft); }
+  .quiz-option.selected { border-color: var(--navy); background: var(--soft); }
+  .quiz-option.correct { border-color: #2e8a5a; background: #ecf8f0; color: #1e6b40; }
+  .quiz-option.incorrect { border-color: #c9474e; background: #fdecee; color: #8b2a30; }
+  .quiz-option .option-letter {
+    width: 24px; height: 24px; border-radius: 50%; background: var(--soft); color: var(--navy);
+    font-weight: 600; font-size: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .quiz-option.correct .option-letter { background: #2e8a5a; color: white; }
+  .quiz-option.incorrect .option-letter { background: #c9474e; color: white; }
+  .quiz-result {
+    margin-top: 18px; padding: 14px 18px; border-radius: 8px;
+    font-size: 14px; display: none;
+  }
+  .quiz-result.show { display: block; }
+  .quiz-result.pass { background: #ecf8f0; color: #1e6b40; border: 1px solid #c8e6d2; }
+  .quiz-result.fail { background: #fdecee; color: #8b2a30; border: 1px solid #f5c8cc; }
+
+  /* ===== PAGES ===== */
+  .page { display: none; }
+  .page.active { display: block; animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ===== HOMEPAGE FEATURES ===== */
+  .home-cta {
+    text-align: center; padding: 32px 0; max-width: 520px; margin: 0 auto;
+  }
+  .name-input {
+    width: 100%; padding: 14px 18px; border-radius: 10px;
+    border: 1.5px solid var(--line); font-family: 'Inter', sans-serif;
+    font-size: 15px; margin-bottom: 16px; background: white; color: var(--text);
+  }
+  .name-input:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px rgba(47,93,140,0.12); }
+
+  /* ===== CERTIFICATE ===== */
+  .certificate {
+    background: white;
+    border: 12px double var(--navy);
+    padding: 70px 50px;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 800px;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+  }
+  .certificate::before, .certificate::after {
+    content: ''; position: absolute; width: 60px; height: 60px;
+    border: 2px solid var(--gold); border-radius: 50%;
+  }
+  .certificate::before { top: 24px; left: 24px; border-right: none; border-bottom: none; border-radius: 0; border-top-left-radius: 12px; }
+  .certificate::after { bottom: 24px; right: 24px; border-left: none; border-top: none; border-radius: 0; border-bottom-right-radius: 12px; }
+  .cert-title { font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .cert-heading { font-family: 'Cormorant Garamond', serif; font-size: 46px; color: var(--navy); margin-bottom: 6px; font-weight: 400; line-height: 1.1; }
+  .cert-sub { font-size: 14px; color: var(--muted); margin-bottom: 30px; letter-spacing: 1px; }
+  .cert-presented { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+  .cert-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 44px; color: var(--navy);
+    border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 28px;
+    font-style: italic; font-weight: 500;
+  }
+  .cert-body { font-size: 14px; color: #444; line-height: 1.8; max-width: 540px; margin: 0 auto 36px; }
+  .cert-body strong { color: var(--navy); }
+  .cert-footer { display: flex; justify-content: space-between; margin-top: 50px; }
+  .cert-sig { flex: 1; }
+  .cert-sig-line { border-top: 1px solid var(--navy); margin: 30px 30px 8px; padding-top: 8px; }
+  .cert-sig-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--navy); font-weight: 500; }
+  .cert-sig-role { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 980px) {
+    .sidebar { transform: translateX(-100%); transition: transform 0.3s ease; }
+    .sidebar.open { transform: translateX(0); box-shadow: var(--shadow-lg); }
+    .main { margin-left: 0; }
+    .container { padding: 32px 24px; }
+    .hero { padding: 60px 28px 50px; margin: -32px -24px 36px; }
+    .card-grid, .card-grid-3, .compare-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 40px; } h2 { font-size: 30px; } h3 { font-size: 22px; }
+    .quiz-block { padding: 24px 22px; }
+    .menu-toggle { display: flex !important; }
+  }
+  .menu-toggle {
+    display: none; position: fixed; top: 16px; left: 16px; z-index: 100;
+    width: 44px; height: 44px; background: var(--navy); color: white;
+    border: none; border-radius: 10px; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 20px; box-shadow: var(--shadow);
+  }
+
+  /* ===== PRINT (certificate) ===== */
+  @media print {
+    .sidebar, .nav-buttons, .menu-toggle, .no-print { display: none !important; }
+    .main { margin-left: 0; }
+    .container { padding: 0; }
+    .page:not(#page-certificate) { display: none !important; }
+    .page#page-certificate { display: block !important; }
+    body { background: white; }
+  }
+</style>
+</head>
+<body>
+
+<button class="menu-toggle" onclick="toggleSidebar()">≡</button>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <img class="brand-logo" src="images/euphoric-leisure-logo.png" alt="Euphoric Leisure"
+           onerror="this.style.display='none'; this.nextElementSibling && (this.nextElementSibling.style.display='block');"/>
+      <div style="display:none; font-family:'Cormorant Garamond',serif; font-size:24px; color:var(--navy); font-weight:500; letter-spacing:1px;">Euphoric Leisure</div>
+    </div>
+    <div class="sidebar-tag">Training Course</div>
+    <div class="course-title">Onboarding &amp;<strong>Platform Specialist</strong></div>
+
+    <div class="progress-wrap">
+      <div class="progress-label"><span>Your Progress</span><span id="progressPercent">0%</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+
+    <nav>
+      <button class="nav-item" data-page="home">
+        <span class="nav-num">⌂</span> Welcome Home
+      </button>
+
+      <div class="nav-section">
+        <button class="nav-item" data-page="s1">
+          <span class="nav-num">1</span> Welcome &amp; Company Ethos <span class="nav-check">✓</span>
+        </button>
+      </div>
+
+      <div class="nav-section">
+        <button class="nav-item" data-page="s2">
+          <span class="nav-num">2</span> New Listing Onboarding <span class="nav-check">✓</span>
+        </button>
+        <div class="nav-sub">
+          <button class="nav-item" data-page="s2-1">2.1 Airtable &amp; Canva</button>
+          <button class="nav-item" data-page="s2-2">2.2 Boom &amp; PriceLabs</button>
+          <button class="nav-item" data-page="s2-3">2.3 Channel Publishing</button>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <button class="nav-item" data-page="s3">
+          <span class="nav-num">3</span> Platform Optimization <span class="nav-check">✓</span>
+        </button>
+        <div class="nav-sub">
+          <button class="nav-item" data-page="s3-1">3.1 Airbnb Optimization</button>
+          <button class="nav-item" data-page="s3-2">3.2 Booking.com Optimization</button>
+          <button class="nav-item" data-page="s3-3">3.3 Listing Content Best Practices</button>
+        </div>
+      </div>
+
+      <div class="nav-section">
+        <button class="nav-item" data-page="s4">
+          <span class="nav-num">4</span> Final Assessment <span class="nav-check">✓</span>
+        </button>
+        <div class="nav-sub">
+          <button class="nav-item" data-page="certificate">Certificate of Completion</button>
+        </div>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+    <div class="container">
+
+      <!-- ========== HOME PAGE ========== -->
+      <section class="page active" id="page-home">
+        <div class="hero">
+          <div class="hero-content">
+            <img class="hero-logo" src="images/euphoric-leisure-logo.png" alt="Euphoric Leisure"
+                 onerror="this.style.display='none';"/>
+            <div class="hero-tag">Onboarding &amp; Platform Specialist · Training</div>
+            <h1>Welcome to <strong>your journey at Euphoric Leisure</strong></h1>
+            <p class="hero-sub">Every guest who books a Euphoric Leisure stay starts with a listing that someone — soon, you — set up beautifully. This course will guide you through every system, platform, and standard you need to thrive as our Onboarding &amp; Platform Specialist.</p>
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Modules</span>
+                <span class="hero-meta-value">4 Sections</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Platforms</span>
+                <span class="hero-meta-value">8+ Tools</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Outcome</span>
+                <span class="hero-meta-value">Certified Specialist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-eyebrow">What you'll learn</div>
+        <div class="card-grid">
+          <div class="icon-card">
+            <div class="icon">◆</div>
+            <h4>Our Ethos</h4>
+            <p>Who Euphoric Leisure is, the regional groups we manage, and the standards behind every listing.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">⌂</div>
+            <h4>New Listing Onboarding</h4>
+            <p>The end-to-end process from receiving a new listing in Airtable to going live across every channel.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">⚙</div>
+            <h4>Platform Optimization</h4>
+            <p>How to set Airbnb and Booking.com up for maximum bookings, plus listing content that actually converts.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">★</div>
+            <h4>Certification</h4>
+            <p>Pass the final assessment to earn your Onboarding &amp; Platform Specialist certificate.</p>
+          </div>
+        </div>
+
+        <div class="quote-card">
+          <p>A great listing is the foundation of every great stay. When the setup is right — accurate data, beautiful photos, the right markups, the right promotions — everything downstream just works.</p>
+          <div class="quote-attr">— The Euphoric Leisure Standard</div>
+        </div>
+
+        <div class="card" style="margin-top: 40px;">
+          <h3 style="margin-bottom: 8px;">Let's get started</h3>
+          <p style="margin-bottom: 22px;">Enter your full name below — it'll appear on your completion certificate at the end of the course.</p>
+          <div class="home-cta">
+            <input type="text" id="learnerName" class="name-input" placeholder="Your full name" />
+            <button class="btn btn-primary" onclick="startCourse()">Begin Section 1 →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 1: WELCOME & COMPANY ETHOS ========== -->
+      <section class="page" id="page-s1">
+        <div class="section-eyebrow">Section 1 of 4</div>
+        <h2>Welcome &amp; Company Ethos</h2>
+        <p class="lead">Welcome to the Euphoric Leisure family. Before we dive into the systems and platforms, let's start with the <em>why</em>. Knowing who we are and what we stand for will shape every decision you make as an Onboarding &amp; Platform Specialist.</p>
+
+        <h3 style="margin-top: 40px;">Who We Are</h3>
+        <div class="card">
+          <p>Euphoric Leisure is a South African short-term rental property management company with a curated portfolio of premium holiday properties. We transform homes into high-performing rentals through full-service management, expert revenue optimization, exceptional guest experiences, and meticulous platform setup.</p>
+          <p>Our curated booking platform is called <strong>The Pangolin Collection</strong> — a portfolio of premium properties across South Africa designed for travellers seeking elevated holiday experiences.</p>
+        </div>
+
+        <div class="quote-card" style="margin-top: 32px;">
+          <p>We take care of everything — so homeowners can invest with confidence and guests can travel with ease.</p>
+          <div class="quote-attr">— The Euphoric Leisure Brand Promise</div>
+        </div>
+
+        <h3 style="margin-top: 40px;">Your Role: Onboarding &amp; Platform Specialist</h3>
+        <p>You are the person who makes new properties bookable — and keeps existing listings working at their best across every channel. Without you, properties don't go live. Without you, listings sit underperforming because the right markups, promotions, or content weren't applied. Your work is the foundation that the rest of the team builds on.</p>
+
+        <div class="card-grid">
+          <div class="icon-card">
+            <div class="icon">⊕</div>
+            <h4>Onboard New Listings</h4>
+            <p>Take a property from a signed mandate to fully live across Airbnb, Booking.com, and LekkerGuest — accurately, completely, and on time.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">⚙</div>
+            <h4>Optimize Platforms</h4>
+            <p>Apply the correct markups, promotions, partner programmes, and content standards on every channel so listings convert.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">✦</div>
+            <h4>Maintain Standards</h4>
+            <p>Every listing across the portfolio looks, reads, and performs to the same Euphoric Leisure standard.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">🤝</div>
+            <h4>Collaborate</h4>
+            <p>Work closely with the customer success team, Revenue Manager, and homeowners via Slack and WhatsApp.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 40px;">Our Portfolio &amp; Regional Groups</h3>
+        <p>Euphoric Leisure currently manages a portfolio of around <strong>95–110 active listings</strong>. To make pricing and operations consistent, we organise them into seven regional groups. You'll see these everywhere — in Airtable, PriceLabs, and our internal reports.</p>
+
+        <div class="card-grid-3">
+          <div class="icon-card">
+            <div class="icon">⛰</div>
+            <h4>Cathkin Group</h4>
+            <p>Drakensberg properties. Long booking windows. Weekend-heavy demand.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">◇</div>
+            <h4>Inland Group</h4>
+            <p>Bushveld and inland retreats. Long booking windows. Weekend-heavy.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">≋</div>
+            <h4>Zimbali Group</h4>
+            <p>Premium KZN coastal estate properties.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">⌬</div>
+            <h4>Ocean Club Group</h4>
+            <p>The Ocean Club estate at Zimbali Lakes.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">✺</div>
+            <h4>Other Coastal Group</h4>
+            <p>Coastal properties outside Zimbali. Strong weekend demand.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">▣</div>
+            <h4>Urban Group</h4>
+            <p>City listings. Short booking windows. Mix of weekday and weekend demand.</p>
+          </div>
+        </div>
+        <div class="card-grid-3" style="margin-top: 0;">
+          <div class="icon-card">
+            <div class="icon">◈</div>
+            <h4>Cape Town Group</h4>
+            <p>The Cape Town portfolio. Treated separately from general Urban due to distinct demand patterns.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 40px;">The Platforms You'll Live In</h3>
+        <p>You'll move between these systems every day. By the end of this course, you'll know exactly what each one does and why we use it.</p>
+
+        <div class="card-grid">
+          <div class="icon-card">
+            <div class="icon">▦</div>
+            <h4>Airtable</h4>
+            <p>Single source of truth for owner and listing data. Where every new listing starts.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">▥</div>
+            <h4>Canva</h4>
+            <p>Where we prepare listing image sets at the correct dimensions and order.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">⚙</div>
+            <h4>Boom (PMS)</h4>
+            <p>Our property management system. Reservations, calendars, channel manager, owner accounts.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">$</div>
+            <h4>PriceLabs</h4>
+            <p>Dynamic pricing engine. Sets daily rates based on market signals, occupancy, and seasonality.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">A</div>
+            <h4>Airbnb</h4>
+            <p>Primary OTA channel. Content-driven platform — listing copy and photos do most of the selling.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">B</div>
+            <h4>Booking.com</h4>
+            <p>Second major OTA. Promotion and partner-programme heavy — markup strategy is critical.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">L</div>
+            <h4>LekkerGuest</h4>
+            <p>South Africa-specific OTA. Light setup but every listing is published here.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">G</div>
+            <h4>Google Travel</h4>
+            <p>Optional channel for eligible properties. Activated through Boom.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 40px;">How We Work</h3>
+        <p>A few principles that show up in every part of this course:</p>
+
+        <ul class="styled">
+          <li><strong>Accuracy beats speed.</strong> A listing with missing or wrong information will cost you ten times more time later than getting it right the first time. If something's missing, stop and get it.</li>
+          <li><strong>Consistency across the portfolio.</strong> Every Euphoric Leisure listing should feel like it came from the same brand — same setup standards, same content style, same fee transparency.</li>
+          <li><strong>Direct, professional communication.</strong> We work with the team in Slack and with homeowners via WhatsApp and email. Always clear, always concise, always respectful.</li>
+          <li><strong>Use the documentation.</strong> Procedures exist for a reason. When you're unsure, refer to the procedure documents — they reflect lessons we've already learned the hard way.</li>
+        </ul>
+
+        <div class="callout">
+          <div class="callout-title">A Note on Your Counterpart, the Revenue Manager</div>
+          <p>You'll work closely with the Revenue Manager, who handles pricing strategy in PriceLabs. You set the listing up correctly; he keeps prices optimised over time. Both jobs depend on each other — if the listing isn't connected properly to PriceLabs, dynamic pricing can't do its job.</p>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="quiz-block" data-quiz="quiz1">
+          <div class="quiz-eyebrow">Knowledge Check</div>
+          <h3>Section 1 Quiz</h3>
+          <p style="margin-bottom: 18px;">Answer all questions correctly to complete this section.</p>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">1. Euphoric Leisure's curated booking platform of premium properties is called:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> The Springbok Selection</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> The Cape Collective</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> The Pangolin Collection</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> The Leisure Edit</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="3">
+            <div class="quiz-q-text">2. Which of these is NOT one of our seven regional groups?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Cathkin Group</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Ocean Club Group</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Urban Group</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Garden Route Group</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">3. Which platform is our property management system (PMS)?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> PriceLabs</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Boom</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Airtable</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> LekkerGuest</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">4. Roughly how many active listings does Euphoric Leisure currently manage?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 30–40</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 95–110</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 200+</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 500+</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="submitQuiz('quiz1', 's1')">Submit Answers</button>
+          <div class="quiz-result" id="result-quiz1"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('home')">← Home</button>
+          <button class="btn btn-primary" onclick="goTo('s2')">Next: New Listing Onboarding →</button>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 2: NEW LISTING ONBOARDING (overview) ========== -->
+      <section class="page" id="page-s2">
+        <div class="section-eyebrow">Section 2 of 4</div>
+        <h2>New Listing Onboarding</h2>
+        <p class="lead">When a new mandate comes in, you take it from "we just signed an owner" all the way to "the listing is live and bookable on every channel." This is the most repeatable, process-driven part of your role — and the foundation of everything else.</p>
+
+        <h3 style="margin-top: 36px;">The End-to-End Flow</h3>
+        <p>Eight steps, in this order. Skipping or reordering them creates problems further down the line.</p>
+
+        <div class="card">
+          <ol class="styled">
+            <li><strong>Airtable Setup</strong> — Receive the listing, mark it Pre-Onboarding, and complete every mandatory field.</li>
+            <li><strong>Canva Image Setup</strong> — Build the listing's image sequence at 2048 × 1365 px.</li>
+            <li><strong>Boom Setup</strong> — Add the homeowner, create the listing, and configure every tab.</li>
+            <li><strong>PriceLabs</strong> — Connect the listing, set base and minimum price, enable sync.</li>
+            <li><strong>Airbnb</strong> — Publish from Boom, push to Airbnb, monitor connection.</li>
+            <li><strong>Booking.com</strong> — Set up via QuickConnect, configure rate plans, link to Boom.</li>
+            <li><strong>LekkerGuest</strong> — Add financials and sync.</li>
+            <li><strong>Google Travel</strong> (optional, when eligible).</li>
+          </ol>
+        </div>
+
+        <div class="callout warn">
+          <div class="callout-title">Golden Rule of Onboarding</div>
+          <p>If <em>any</em> mandatory information is missing, stop. Do not push the listing forward, do not create workarounds, and do not "fill in something close." Flag the gap, get the answer, then continue. This is the single biggest difference between a clean onboarding and a chaotic one.</p>
+        </div>
+
+        <h3 style="margin-top: 40px;">How This Section Is Structured</h3>
+        <p>To keep things manageable, we've grouped the eight steps into three subsections. Each one ends with a knowledge check.</p>
+
+        <div class="card-grid-3">
+          <div class="icon-card" onclick="goTo('s2-1')" style="cursor:pointer;">
+            <div class="icon">▦</div>
+            <h4>2.1 Airtable &amp; Canva</h4>
+            <p>The pre-onboarding work — getting the listing data clean and the images sequenced correctly.</p>
+          </div>
+          <div class="icon-card" onclick="goTo('s2-2')" style="cursor:pointer;">
+            <div class="icon">⚙</div>
+            <h4>2.2 Boom &amp; PriceLabs</h4>
+            <p>The core setup — adding the listing to our PMS and connecting dynamic pricing.</p>
+          </div>
+          <div class="icon-card" onclick="goTo('s2-3')" style="cursor:pointer;">
+            <div class="icon">⊕</div>
+            <h4>2.3 Channel Publishing</h4>
+            <p>Pushing the listing live on Airbnb, Booking.com, LekkerGuest, and Google Travel.</p>
+          </div>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-title">A Working Companion</div>
+          <p>For every new listing, duplicate the <strong>Master Onboarding Checklist</strong> template and tick items off as you go. The template lives in your team drive — the course mirrors that structure exactly so the two reinforce each other.</p>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('s1')">← Section 1</button>
+          <button class="btn btn-primary" onclick="goTo('s2-1')">Start with 2.1 →</button>
+        </div>
+      </section>
+
+      <!-- ========== 2.1 AIRTABLE & CANVA ========== -->
+      <section class="page" id="page-s2-1">
+        <div class="section-eyebrow">Section 2.1</div>
+        <h2>Airtable &amp; Canva</h2>
+        <p class="lead">Onboarding starts before you touch a single platform. Two things have to be right first: the data in Airtable, and the image sequence in Canva. Get these wrong and the rest of the setup will be wrong too.</p>
+
+        <h3 style="margin-top: 32px;">Step 1 — Airtable Setup</h3>
+        <p>Airtable is the single source of truth for owner, mandate, and listing information. Every onboarding starts and ends here.</p>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">A</span> Receive &amp; Locate the Listing</div>
+          <ul>
+            <li>Monitor Slack for a new listing form notification.</li>
+            <li>Open Airtable → Properties → Engaging view.</li>
+            <li>Locate the new property.</li>
+            <li>Change status → <strong>Pre-Onboarding</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">B</span> Complete Mandatory Fields</div>
+          <ul>
+            <li>Assign the homeowner.</li>
+            <li>Upload the signed mandate.</li>
+            <li>Select Virtual Property Management (Yes / No).</li>
+            <li>Enter the management fee.</li>
+            <li>Add the Property Manager (name, email, phone).</li>
+            <li>Select the management solution.</li>
+            <li>Assign Social #.</li>
+            <li>Enter the security deposit and damage waiver.</li>
+            <li>Confirm all owner-submitted info is complete.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">C</span> Verify Critical Info</div>
+          <ul>
+            <li>Property address.</li>
+            <li>Cleaning setup.</li>
+            <li>Wi-Fi details.</li>
+            <li>Lockbox / smart lock details.</li>
+            <li>Lock code.</li>
+            <li>Arrival instructions (codes, access, forms).</li>
+          </ul>
+        </div>
+
+        <div class="callout warn">
+          <div class="callout-title">⚠ Do Not Proceed if Anything is Missing</div>
+          <p>This is where most onboarding pain comes from. A missing Wi-Fi password, a missing lock code, a missing arrival instruction — each one becomes a guest issue downstream. Pause, get the missing piece, then continue.</p>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">D</span> Create &amp; Share the Booking View</div>
+          <ul>
+            <li>Go to the Bookings tab.</li>
+            <li>Duplicate the Property Report view.</li>
+            <li>Rename the duplicate to the property name.</li>
+            <li>Apply filter: Property Name contains the correct property.</li>
+            <li>Create a share link, copy it, and paste it into "Bookings Report Link" in Airtable.</li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top: 44px;">Step 2 — Canva (Images Setup)</h3>
+        <p>Photos are the single biggest driver of bookings on Airbnb and Booking.com. The order matters as much as the quality. Always work from the same template structure so the portfolio feels consistent.</p>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">A</span> Folder Setup</div>
+          <ul>
+            <li>Log into Canva.</li>
+            <li>Locate or create the property folder.</li>
+            <li>Create two subfolders: <strong>Low Res</strong> and <strong>High Res</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">B</span> Create or Locate the Design</div>
+          <ul>
+            <li>Check if a design already exists for the property.</li>
+            <li>If not, create a new design at <strong>2048 × 1365 px</strong>.</li>
+          </ul>
+        </div>
+
+        <h4 style="margin-top: 26px;">The Image Sequence Rule</h4>
+        <p>The first five images decide whether a guest scrolls or skips. Always lead with these, in this order:</p>
+
+        <ol class="styled">
+          <li><strong>Best overall shot</strong> — the single most striking image of the property.</li>
+          <li><strong>Exterior</strong> — the building or grounds in their best light.</li>
+          <li><strong>The view</strong> — what guests will actually see when they're there.</li>
+          <li><strong>Living area</strong> — the heart of the home.</li>
+          <li><strong>Main bedroom</strong> — the space they'll sleep in.</li>
+        </ol>
+
+        <p>After those five, add remaining images in a logical guest-walkthrough flow:</p>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--navy); padding:14px 18px; background:var(--soft); border-radius:8px;">Entrance → Living → Kitchen → Bedrooms → Bathrooms → Outdoor → Amenities → Views</p>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">C</span> Final Review &amp; Download</div>
+          <ul>
+            <li>Confirm the order is logical and guest-focused.</li>
+            <li>Confirm images fill their frames correctly.</li>
+            <li>Download the final images.</li>
+            <li>Verify: correct folder, correct size, ready to upload.</li>
+          </ul>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-title">Why the Sequence Matters</div>
+          <p>Airbnb and Booking.com both display the first photo as the listing's hero image in search results. If the hero isn't the strongest shot, you lose clicks before a guest even reads the title.</p>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="quiz-block" data-quiz="quiz2-1">
+          <div class="quiz-eyebrow">Knowledge Check</div>
+          <h3>Section 2.1 Quiz</h3>
+          <p style="margin-bottom: 18px;">Answer all questions correctly to complete this subsection.</p>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">1. When a new listing form arrives, what status do you set it to in Airtable?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Live</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Active</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Pre-Onboarding</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Engaging</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">2. What's the correct image dimension to use in Canva for listing photos?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 1920 × 1080 px</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 2048 × 1365 px</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 1024 × 768 px</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 4096 × 2730 px</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="0">
+            <div class="quiz-q-text">3. What are the first five images of a listing, in order?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Best overall, exterior, view, living area, main bedroom</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Bathroom, kitchen, balcony, hallway, garage</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Pool, lounge, kitchen, outdoor, parking</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Whichever five look best in any order</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">4. The owner-submitted form is missing the Wi-Fi password and lock code. What do you do?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Use placeholder values and update later.</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Push the listing live anyway — it's faster.</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Pause the onboarding, request the missing details, and only continue once they're in.</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Skip those fields entirely.</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="submitQuiz('quiz2-1', 's2-1')">Submit Answers</button>
+          <div class="quiz-result" id="result-quiz2-1"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('s2')">← Section 2</button>
+          <button class="btn btn-primary" onclick="goTo('s2-2')">Next: 2.2 Boom &amp; PriceLabs →</button>
+        </div>
+      </section>
+
+      <!-- ========== 2.2 BOOM & PRICELABS ========== -->
+      <section class="page" id="page-s2-2">
+        <div class="section-eyebrow">Section 2.2</div>
+        <h2>Boom &amp; PriceLabs</h2>
+        <p class="lead">Boom is our PMS — the operational core where the listing actually lives. PriceLabs is the dynamic pricing engine that keeps daily rates competitive. Together, these two systems power every other channel.</p>
+
+        <h3 style="margin-top: 32px;">Step 3 — Boom Setup</h3>
+        <p>Boom is configured in three blocks: the homeowner, the listing itself, and the calendar. Work through them in order.</p>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">A</span> Add the Homeowner</div>
+          <ul>
+            <li>Configuration → Settings → Add User.</li>
+            <li>Role = <strong>Investor</strong>.</li>
+            <li>Fill in the homeowner's details.</li>
+            <li>Enable the appropriate permissions.</li>
+            <li>Toggle notifications: <strong>ON for reservations, OFF for payments</strong>.</li>
+            <li>Send the homeowner their login details.</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">Why Notifications Matter</div>
+          <p>Owners care about reservations — those are bookings on their property. Payment notifications, on the other hand, are noisy and confusing for them. Always: ON reservations, OFF payments.</p>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">B</span> Create the Listing</div>
+          <ul>
+            <li>Click + → New Listing.</li>
+            <li>Fill in: name / nickname, address, bedrooms, bathrooms, max guests, description.</li>
+            <li>Save.</li>
+          </ul>
+        </div>
+
+        <h4 style="margin-top: 26px;">Step 3C — Configure the Listing (Tab by Tab)</h4>
+        <p>Boom has multiple tabs for a listing. Work through each one.</p>
+
+        <div class="card-grid">
+          <div class="card" style="margin:0;">
+            <div class="section-eyebrow" style="margin-bottom:8px;">General</div>
+            <ul class="styled">
+              <li>Title and nickname match.</li>
+              <li>Address and coordinates correct.</li>
+              <li>Check-in and check-out times set.</li>
+              <li>Bedrooms and beds entered.</li>
+              <li>All description fields completed.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin:0;">
+            <div class="section-eyebrow" style="margin-bottom:8px;">Pricing &amp; Fees</div>
+            <ul class="styled">
+              <li>Security deposit.</li>
+              <li>Cleaning fee.</li>
+              <li>Damage waiver.</li>
+              <li>Cancellation policy.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin:0;">
+            <div class="section-eyebrow" style="margin-bottom:8px;">Amenities</div>
+            <ul class="styled">
+              <li>Select <strong>all</strong> relevant amenities. Don't be conservative — every box ticked helps the listing surface in filtered searches.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin:0;">
+            <div class="section-eyebrow" style="margin-bottom:8px;">Images</div>
+            <ul class="styled">
+              <li>Upload the Canva image sequence in the same order you saved them.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin:0;">
+            <div class="section-eyebrow" style="margin-bottom:8px;">Information</div>
+            <ul class="styled">
+              <li>Door codes.</li>
+              <li>Parking details.</li>
+              <li>Wi-Fi name and password.</li>
+              <li>Arrival and departure instructions.</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin:0;">
+            <div class="section-eyebrow" style="margin-bottom:8px;">Personnel</div>
+            <ul class="styled">
+              <li>Assign the relevant staff (cleaners, ground operator, etc.).</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 style="margin-top: 26px;">Step 3D — Configuration Tab</h4>
+        <div class="card">
+          <ul class="styled">
+            <li>Region set to the correct regional group.</li>
+            <li>Owner selected.</li>
+            <li>Owner vacation toggle <strong>ON</strong>.</li>
+            <li>Commission = <strong>0.1725</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="callout warn">
+          <div class="callout-title">Commission — Get This Exact</div>
+          <p>The commission must be entered as <strong>0.1725</strong> — not 17.25, not 0.17, not 17%. Wrong commission affects every owner payout going forward.</p>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">E</span> Calendar Setup</div>
+          <ul>
+            <li>Pricing engine = <strong>PriceLabs</strong>.</li>
+            <li>Set the booking rules.</li>
+            <li>Sync with PriceLabs.</li>
+            <li>Block the calendar (the listing isn't live to book yet).</li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top: 44px;">Step 4 — PriceLabs</h3>
+        <p>PriceLabs needs three things from you: an account connection, base and minimum prices, and an active sync with Boom.</p>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">A</span> Connect the Account</div>
+          <ul>
+            <li>In PriceLabs, add or reconnect the listing.</li>
+            <li>Select <strong>Boom</strong> as the PMS.</li>
+            <li>Enable sync.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">B</span> Connect on Boom's Side</div>
+          <ul>
+            <li>Settings → Integrations.</li>
+            <li>Add the PriceLabs email.</li>
+            <li>Save.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">C</span> Configure Pricing</div>
+          <ul>
+            <li>Set the minimum price (the floor — the listing will never drop below this).</li>
+            <li>Set the base price (the engine's anchor for dynamic pricing).</li>
+            <li>Save and refresh.</li>
+            <li>Enable the sync toggle.</li>
+          </ul>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-title">Base vs Minimum — The 1.33× Rule</div>
+          <p>Set the <strong>base price at roughly 1.33× the minimum</strong> (a 25–45% gap is the safe range). If they're too close, PriceLabs has no room to flex prices up or down — and the entire dynamic pricing strategy collapses. The Revenue Manager will fine-tune from there.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">Where the Pricing Engine Sits</div>
+          <p>You're not setting the daily rates yourself. You're giving PriceLabs the boundaries it needs to do its job. Daily rates, seasonality, last-minute discounts, and far-out premiums are all the Revenue Manager's domain.</p>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="quiz-block" data-quiz="quiz2-2">
+          <div class="quiz-eyebrow">Knowledge Check</div>
+          <h3>Section 2.2 Quiz</h3>
+          <p style="margin-bottom: 18px;">Answer all questions correctly to complete this subsection.</p>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">1. What role do you assign to the homeowner when adding them in Boom?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Admin</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Manager</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Investor</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Owner</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">2. Which notifications should be ON for the homeowner, and which OFF?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> ON: payments, OFF: reservations</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> ON: reservations, OFF: payments</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Both ON</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Both OFF</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">3. The commission value to enter in Boom Configuration is:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 17.25</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 0.17</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 0.1725</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 1.725</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">4. Recommended relationship between base price and minimum price in PriceLabs:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Base = Minimum</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Base 5% higher than Minimum</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Base roughly 1.33× the Minimum (25–45% higher)</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Base 3× Minimum</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">5. Which pricing engine is selected in Boom's Calendar Setup?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Beyond Pricing</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> PriceLabs</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Wheelhouse</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> None — Boom prices manually</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="submitQuiz('quiz2-2', 's2-2')">Submit Answers</button>
+          <div class="quiz-result" id="result-quiz2-2"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('s2-1')">← 2.1 Airtable &amp; Canva</button>
+          <button class="btn btn-primary" onclick="goTo('s2-3')">Next: 2.3 Channel Publishing →</button>
+        </div>
+      </section>
+
+      <!-- ========== 2.3 CHANNEL PUBLISHING ========== -->
+      <section class="page" id="page-s2-3">
+        <div class="section-eyebrow">Section 2.3</div>
+        <h2>Channel Publishing</h2>
+        <p class="lead">With Boom and PriceLabs in place, the listing is ready to go live across our channels. Publish in this order: Airbnb first, then Booking.com, then LekkerGuest. Google Travel comes last and only when eligible.</p>
+
+        <h3 style="margin-top: 32px;">Step 5 — Airbnb</h3>
+        <p>Airbnb publishing happens entirely from Boom. You won't log into Airbnb directly during onboarding.</p>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">A</span> Publish the Listing</div>
+          <ul>
+            <li>Marketing → Channels.</li>
+            <li>Open "Unpublished Listings".</li>
+            <li>Click Publish.</li>
+            <li>Resolve any errors that come up (missing fields, invalid amenities, etc.).</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">B</span> Push to Airbnb</div>
+          <ul>
+            <li>Select the Airbnb channel.</li>
+            <li>Add the property.</li>
+            <li>Select the listing.</li>
+            <li>Set markup = <strong>33%</strong>.</li>
+            <li>Click Create listing.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">C</span> Monitor</div>
+          <ul>
+            <li>Status → <strong>Listed</strong>.</li>
+            <li>Sync → <strong>Connected</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">A Note on the Airbnb Markup</div>
+          <p>The setup markup is 33%, but it's adjusted depending on listing maturity. Brand-new listings drop to 20% with a New Listing promotion to drive early bookings. After roughly three bookings, it returns to 33%. We'll cover this in detail in section 3.1.</p>
+        </div>
+
+        <h3 style="margin-top: 44px;">Step 6 — Booking.com</h3>
+        <p>Booking.com is set up in the BDC Extranet first, then connected to Boom. This is a bigger configuration than Airbnb because BDC has more pricing levers.</p>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">A</span> Initial Setup (BDC Extranet)</div>
+          <ul>
+            <li>Add the property.</li>
+            <li>Enter the full address manually.</li>
+            <li>Import the Airbnb link (BDC pulls some data from it).</li>
+            <li>Select <strong>QuickConnect</strong> as the connectivity method.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">B</span> Property Details &amp; Rules</div>
+          <ul>
+            <li>Rooms and capacity.</li>
+            <li>Apartment size.</li>
+            <li>Description (copy from Boom).</li>
+            <li>Host profile added.</li>
+            <li>Select all relevant amenities.</li>
+            <li>Complete house rules.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">C</span> Photos</div>
+          <ul>
+            <li>Remove any images BDC imported from Airbnb.</li>
+            <li>Upload the Canva image sequence in the same order.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">D</span> Pricing Setup (Temporary)</div>
+          <ul>
+            <li>Set a temporary rate of <strong>R8000</strong>.</li>
+            <li>Cancellation = <strong>30 days</strong>.</li>
+            <li>Disable any extra rate plans BDC creates by default — we'll set up the proper rate plans in section 3.2.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">E</span> Channel Manager &amp; Policies</div>
+          <ul>
+            <li>Select "Connect to channel manager" → choose <strong>QuickConnect</strong>.</li>
+            <li>Block the calendar.</li>
+            <li>Set guest requirements.</li>
+            <li>Fees: <strong>2.5% service fee + cleaning</strong>.</li>
+            <li>Damage deposit.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">F</span> Connect to Boom</div>
+          <ul>
+            <li>In Boom: Marketing → Channels → Booking.com.</li>
+            <li>Enter the BDC property ID.</li>
+            <li>Match the listing.</li>
+            <li>Set markup = <strong>85%</strong>.</li>
+            <li>Click Link &amp; Connect.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">G</span> Final Checks</div>
+          <ul>
+            <li>"Connection activated" message appears.</li>
+            <li>Prices are syncing from Boom to BDC.</li>
+            <li>Listing is visible in BDC.</li>
+          </ul>
+        </div>
+
+        <div class="callout warn">
+          <div class="callout-title">Don't Skip the Order</div>
+          <p>Set up rate plans in BDC <em>before</em> activating promotions. Promotions attach themselves to existing rate plans — if you change rate plans later, promotions don't carry over and you'll have to redo them. Section 3.2 covers the proper rate plan structure.</p>
+        </div>
+
+        <h3 style="margin-top: 44px;">Step 7 — LekkerGuest</h3>
+        <p>LekkerGuest is the lightest channel to set up. The bookings come through automatically once it's wired up.</p>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">A</span> Setup &amp; Finalize</div>
+          <ul>
+            <li>Log into LekkerGuest.</li>
+            <li>Open the property.</li>
+            <li>Click edit.</li>
+            <li>Add financials: security deposit and damage waiver.</li>
+            <li>Save.</li>
+            <li>Sync bookings.</li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top: 44px;">Step 8 — Google Travel (Optional)</h3>
+        <p>Only do this when the property is eligible. Google Travel acts as a free distribution layer that surfaces eligible listings in Google search and Maps results.</p>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">A</span> Verify Requirements</div>
+          <ul>
+            <li>Property type valid.</li>
+            <li>Address with geo-coordinates.</li>
+            <li>Description completed.</li>
+            <li>At least 5 images uploaded.</li>
+            <li>Availability set in calendar.</li>
+          </ul>
+        </div>
+
+        <div class="checklist">
+          <div class="checklist-title"><span class="step-pill">B</span> Connect</div>
+          <ul>
+            <li>Boom → Channels → Google.</li>
+            <li>Activate the listing.</li>
+            <li>Add a URL if Google requires one.</li>
+          </ul>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-title">You're Done — But Not Yet Optimized</div>
+          <p>At this point the listing is <em>live and bookable</em>. But "live" isn't the same as "performing." Section 3 covers how we optimize each channel so the listing actually converts.</p>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="quiz-block" data-quiz="quiz2-3">
+          <div class="quiz-eyebrow">Knowledge Check</div>
+          <h3>Section 2.3 Quiz</h3>
+          <p style="margin-bottom: 18px;">Answer all questions correctly to complete this subsection.</p>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">1. What's the markup you set when pushing a listing from Boom to Airbnb during onboarding?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 20%</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 33%</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 50%</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 85%</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">2. The connectivity method used for Booking.com is:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Manual</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Direct API</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> QuickConnect</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Channel Bridge</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="3">
+            <div class="quiz-q-text">3. The Boom-to-Booking.com markup during onboarding is:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 21%</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 33%</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 67%</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 85%</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="0">
+            <div class="quiz-q-text">4. On Booking.com, what's the temporary nightly rate you set during initial setup?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> R8000</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> R1000</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> R12000</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Whatever the owner says</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">5. Why must rate plans be configured on Booking.com BEFORE you set up promotions?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> The Extranet won't load otherwise.</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Promotions are billed differently for new rate plans.</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Promotions attach to existing rate plans — change the rate plans later and the promotions won't apply to them.</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> It's an arbitrary rule, no real reason.</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="submitQuiz('quiz2-3', 's2-3')">Submit Answers</button>
+          <div class="quiz-result" id="result-quiz2-3"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('s2-2')">← 2.2 Boom &amp; PriceLabs</button>
+          <button class="btn btn-primary" onclick="goTo('s3')">Next: Section 3 →</button>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 3: PLATFORM OPTIMIZATION (overview) ========== -->
+      <section class="page" id="page-s3">
+        <div class="section-eyebrow">Section 3 of 4</div>
+        <h2>Platform Optimization</h2>
+        <p class="lead">Going live is the start, not the finish line. Now we make the listings actually <em>convert</em>. Each platform has its own levers — markups, promotions, partner programmes, content — and our job is to pull them in the right combinations.</p>
+
+        <h3 style="margin-top: 36px;">The Three Pillars of Optimization</h3>
+        <div class="card-grid-3">
+          <div class="icon-card" onclick="goTo('s3-1')" style="cursor:pointer;">
+            <div class="icon">A</div>
+            <h4>3.1 Airbnb</h4>
+            <p>Description structure, cancellation policy, instant book, markup strategy, promotions, and discount stacking.</p>
+          </div>
+          <div class="icon-card" onclick="goTo('s3-2')" style="cursor:pointer;">
+            <div class="icon">B</div>
+            <h4>3.2 Booking.com</h4>
+            <p>Rate plans, the markup matrix, partner programmes, promotion stacking, LTD strategy, and grace period.</p>
+          </div>
+          <div class="icon-card" onclick="goTo('s3-3')" style="cursor:pointer;">
+            <div class="icon">✎</div>
+            <h4>3.3 Listing Content</h4>
+            <p>Our house style, banned words, the 500-character rule, and real before/after rewrites.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <div class="callout-title">A Word of Warning</div>
+          <p>Optimization without consistency hurts the portfolio. If one listing has Genius enabled at Level 1 Non-Dynamic and another has Level 3 Dynamic, the team can't predict performance or compare like for like. Stick to the standards in this section unless the Revenue Manager explicitly asks for an exception.</p>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('s2-3')">← 2.3 Channel Publishing</button>
+          <button class="btn btn-primary" onclick="goTo('s3-1')">Start with 3.1 →</button>
+        </div>
+      </section>
+
+      <!-- ========== 3.1 AIRBNB OPTIMIZATION ========== -->
+      <section class="page" id="page-s3-1">
+        <div class="section-eyebrow">Section 3.1</div>
+        <h2>Airbnb Optimization</h2>
+        <p class="lead">Airbnb is a content-driven platform. Photos and copy do most of the selling work — the pricing levers are simpler than Booking.com. Get the basics right and the listing performs.</p>
+
+        <h3 style="margin-top: 32px;">Confirm the Boom Connection</h3>
+        <p>Before anything else, in Boom: Marketing → Channels → Airbnb. Confirm the listing is connected. If it isn't, no other change you make here will sync.</p>
+
+        <h3 style="margin-top: 36px;">The Five Description Fields</h3>
+        <p>Airbnb gives you five distinct content fields. Each one has a job. Filling them all properly is one of the highest-impact things you can do for a listing's ranking.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th style="width:32%;">Field</th><th>Purpose</th><th style="width:18%;">Limit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="cell-strong">Listing description</td><td>The first thing guests see. Lead with the strongest concrete fact.</td><td class="cell-num">500 chars</td></tr>
+            <tr><td class="cell-strong">Your property</td><td>Detailed property description, structured by section.</td><td>—</td></tr>
+            <tr><td class="cell-strong">Guest access</td><td>Exactly what guests will have access to.</td><td>—</td></tr>
+            <tr><td class="cell-strong">Interaction with guests</td><td>How communication will be handled during the stay.</td><td>—</td></tr>
+            <tr><td class="cell-strong">Other details to note</td><td>Anything important that didn't fit elsewhere.</td><td>—</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top: 36px;">The Non-Negotiables</h3>
+        <div class="card-grid">
+          <div class="icon-card">
+            <div class="icon">🛡</div>
+            <h4>Cancellation Policy: Firm</h4>
+            <p>Always set to <strong>Firm</strong>. This balances guest flexibility with protection against last-minute cancellations.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">⚡</div>
+            <h4>Instant Book: ON</h4>
+            <p>Always ON. Instant Book listings rank higher and convert better than request-only listings.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 36px;">Markup Strategy</h3>
+        <p>The Airbnb markup depends on whether the listing is brand new or already active.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Listing State</th><th>Markup</th><th>Why</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="cell-strong">NEW listing</td><td class="cell-num">20%</td><td>Drive early bookings; pair with the New Listing promotion.</td></tr>
+            <tr><td class="cell-strong">Already active</td><td class="cell-num">33%</td><td>Standard channel margin once the listing has booking history.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <div class="callout-title">When Does "New" Become "Active"?</div>
+          <p>Once <strong>three bookings</strong> have happened. That's the trigger to move from 20% markup to 33% and to switch the discount strategy from "New Listing promotion only" to the full early-bird + last-minute combination below.</p>
+        </div>
+
+        <h3 style="margin-top: 36px;">Promotions &amp; Discounts</h3>
+
+        <h4 style="margin-top: 22px;">For NEW listings (until the third booking lands)</h4>
+        <div class="card">
+          <ul class="styled">
+            <li>Activate the <strong>New Listing promotion at 20%</strong>.</li>
+            <li>Do not apply the 33% markup yet — keep markup at 20% until the third booking.</li>
+            <li>The goal: get bookings on the board fast. ADR can come later.</li>
+          </ul>
+        </div>
+
+        <h4 style="margin-top: 22px;">For ACTIVE listings (3+ bookings)</h4>
+        <div class="card">
+          <p>Use the structured discount pair below — together they give a guest a discount no matter when they're booking, which is exactly what we want.</p>
+          <ul class="styled">
+            <li><strong>Early-bird discount:</strong> 20% off for guests who book at least <strong>1 month before arrival</strong>.</li>
+            <li><strong>Last-minute discount:</strong> 20% off for guests booking <strong>0–28 days before arrival</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-title">The Always-On Discount Pattern</div>
+          <p>When you stack early-bird (1+ month out) and last-minute (0–28 days), every possible booking window has a discount applied. There's never a "dead zone" where a guest sees the full price with no incentive — and that's intentional.</p>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="quiz-block" data-quiz="quiz3-1">
+          <div class="quiz-eyebrow">Knowledge Check</div>
+          <h3>Section 3.1 Quiz</h3>
+          <p style="margin-bottom: 18px;">Answer all questions correctly to complete this subsection.</p>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">1. The cancellation policy on every Euphoric Leisure Airbnb listing is set to:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Flexible</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Firm</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Strict</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Super Strict</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="0">
+            <div class="quiz-q-text">2. Should Instant Book be ON or OFF?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Always ON</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Always OFF</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> ON only on weekends</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> OFF for the first month, then ON</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="0">
+            <div class="quiz-q-text">3. A NEW Airbnb listing should have a markup of:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 20%</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 33%</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 50%</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 85%</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">4. After how many bookings does a listing transition from "new" to "active" treatment?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 1</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 2</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 3</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 10</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">5. The standard discount pair for active Airbnb listings is:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Last-minute 30% + early-bird 30%</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Early-bird 20% (1+ month before) + Last-minute 20% (0–28 days before)</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> A single 15% weekly discount</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> No discounts — full rates only</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="submitQuiz('quiz3-1', 's3-1')">Submit Answers</button>
+          <div class="quiz-result" id="result-quiz3-1"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('s3')">← Section 3</button>
+          <button class="btn btn-primary" onclick="goTo('s3-2')">Next: 3.2 Booking.com →</button>
+        </div>
+      </section>
+
+      <!-- ========== 3.2 BOOKING.COM OPTIMIZATION ========== -->
+      <section class="page" id="page-s3-2">
+        <div class="section-eyebrow">Section 3.2</div>
+        <h2>Booking.com Optimization</h2>
+        <p class="lead">Booking.com has more pricing levers than any other channel. The wins come from understanding how rate plans, partner programmes, and promotions stack — and applying them in the right order.</p>
+
+        <h3 style="margin-top: 32px;">Step 1 — Connectivity Provider</h3>
+        <p>In the BDC Extranet → Account icon (top right) → Connectivity Provider. Always set to <strong>QuickConnect</strong>.</p>
+
+        <h3 style="margin-top: 36px;">Step 2 — Rate Plans (Set These FIRST)</h3>
+        <div class="callout warn">
+          <div class="callout-title">Order Matters</div>
+          <p>Set up rate plans <em>before</em> promotions. If you change rate plans later, the promotions you've already configured won't apply to the new ones — and you'll have to redo everything.</p>
+        </div>
+
+        <p>Every listing should have <strong>two rate plans</strong>:</p>
+        <ul class="styled">
+          <li><strong>Standard Rate (Flex 30)</strong></li>
+          <li><strong>Non-Refundable</strong></li>
+        </ul>
+
+        <h4 style="margin-top: 18px;">How to add a new rate plan</h4>
+        <div class="card">
+          <p><strong>In BDC Extranet:</strong> Rates &amp; Availability → Add new rate plan → Custom (follow the steps) → at step 6, select <strong>"Set up as a new rate plan"</strong>.</p>
+          <p><strong>In Boom:</strong> Marketing → Channels → Booking.com → enter the BDC ID → Manage rates → <strong>Sync changes from Booking.com</strong> → the new rate plans appear.</p>
+        </div>
+
+        <h3 style="margin-top: 36px;">Step 3 — Markups (the Matrix)</h3>
+        <p>The markup depends on which promotions you can run. Three scenarios:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Scenario</th><th>Non-Refundable</th><th>Standard Rate</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="cell-strong">All Promotions + Genius</td><td class="cell-num">75%</td><td class="cell-num">85%</td></tr>
+            <tr><td class="cell-strong">All Promotions, no Genius</td><td class="cell-num">57%</td><td class="cell-num">67%</td></tr>
+            <tr><td class="cell-strong">New listing — Targeting only</td><td class="cell-num">21%</td><td class="cell-num">31%</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout tip">
+          <div class="callout-title">How to Pick Your Scenario</div>
+          <p>Check what's currently available for the listing. Some promotions aren't immediately available for new listings — the markup follows what you can actually run, so you don't end up undercutting yourself when the bigger promotions go live.</p>
+        </div>
+
+        <h3 style="margin-top: 36px;">Step 4 — Partner Programmes</h3>
+        <p>BDC offers three partner programmes. Our position on each is fixed.</p>
+
+        <div class="card-grid">
+          <div class="icon-card" style="border-top:3px solid #2e8a5a;">
+            <h4>Genius — JOIN if eligible</h4>
+            <p>Eligibility: review score above 7.5 and at least 3 reviews.</p>
+            <p style="margin-top:10px;">Settings:</p>
+            <ul class="styled" style="margin-top:6px;">
+              <li>Level 1, <strong>Non-Dynamic</strong> discount.</li>
+              <li>All rooms selected.</li>
+              <li>Manage your audience: rate sharing across different channels selected.</li>
+            </ul>
+            <p style="margin-top:10px; font-size:13px; color:var(--muted);">In high season we may consider Level 2 or 3 by lifting the markup accordingly — confirm with the Revenue Manager first.</p>
+          </div>
+
+          <div class="icon-card" style="border-top:3px solid #2e8a5a;">
+            <h4>Preferred Partner — JOIN if eligible</h4>
+            <p>Always join if eligible. Better placement, better visibility.</p>
+          </div>
+        </div>
+
+        <div class="card-grid" style="margin-top:0;">
+          <div class="icon-card" style="border-top:3px solid #c9474e;">
+            <h4>Preferred Partner PLUS — DO NOT join</h4>
+            <p>Cost-benefit analysis in the South African market shows the additional commission isn't worth it. Always decline.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 36px;">Step 5 — Promotions (How They Stack)</h3>
+        <p>BDC offers five promotion families. They <em>almost</em> all stack on top of each other — the exception being Deep Deals. Here's how we run each one.</p>
+
+        <h4 style="margin-top: 22px;">Genius (Badge)</h4>
+        <p>Already covered above. Always Level 1 Non-Dynamic = 10% off for any guest with a BDC account.</p>
+
+        <h4 style="margin-top: 22px;">Targeting</h4>
+        <div class="card">
+          <p>Always activate <strong>both</strong> at <strong>10%</strong>:</p>
+          <ul class="styled">
+            <li><strong>Mobile Rate</strong> (badge) — App + mobile web platforms selected.</li>
+            <li><strong>Country Rate</strong> — all countries selected.</li>
+          </ul>
+        </div>
+
+        <h4 style="margin-top: 22px;">Portfolio Deals</h4>
+        <table class="data-table">
+          <thead>
+            <tr><th>Promo</th><th>Discount</th><th>Rule</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="cell-strong">Basic Deal</td><td class="cell-num">21%</td><td>Members &amp; newsletter subscribers only — Secret deal selected.</td></tr>
+            <tr><td class="cell-strong">Last-Minute Deal</td><td class="cell-num">21%</td><td>Maximum <strong>12 days</strong> before check-in.</td></tr>
+            <tr><td class="cell-strong">Early Booker Deal</td><td class="cell-num">21%</td><td>Minimum <strong>13 days</strong> before check-in.</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="margin-top: 22px;">Campaign Deals (Badge)</h4>
+        <div class="card">
+          <p>BDC runs three campaign deals through the year — Early 2026 Deal, Getaway Deal, Late Escape Deal. Functionally similar; differ by date window.</p>
+          <p><strong>Always activate at 31%.</strong></p>
+        </div>
+
+        <h4 style="margin-top: 22px;">Deep Deals (Badge)</h4>
+        <div class="callout warn">
+          <div class="callout-title">Deep Deals Don't Stack</div>
+          <p>Deep Deals give the biggest boost in rank and exposure, but they must be <strong>at least 30%</strong> and they do <strong>not stack with any other promotion</strong> — not even Genius. Use them surgically.</p>
+        </div>
+
+        <div class="card">
+          <h4 style="margin-bottom: 8px;">Limited-Time Deal (LTD)</h4>
+          <p>Top of search list. Powerful but heavily constrained: active for only <strong>2 days at a time</strong>, then a full <strong>2 weeks</strong> must pass before re-activation.</p>
+          <p style="margin-top:8px; font-style:italic; color:var(--muted);">Example: activate on the 1st–2nd of January → next eligible activation is the 17th of January.</p>
+          <p style="margin-top:10px;">Euphoric Leisure runs an LTD rotation across listings to share the boost across the portfolio without breaking the cooldown rule.</p>
+
+          <h4 style="margin-top: 18px; margin-bottom: 8px;">Black Friday Deal</h4>
+          <p>One of the most powerful deals BDC offers. Runs once a year — late November to early December — but the bookable period extends a year into the future. <strong>Always activate Black Friday Deal.</strong></p>
+        </div>
+
+        <h3 style="margin-top: 36px;">Step 6 — Grace Period</h3>
+        <p>Set the grace period to <strong>24 hours</strong> after a booking comes in. This gives us a buffer to catch and act on issues before the reservation is locked in irrevocably.</p>
+
+        <!-- QUIZ -->
+        <div class="quiz-block" data-quiz="quiz3-2">
+          <div class="quiz-eyebrow">Knowledge Check</div>
+          <h3>Section 3.2 Quiz</h3>
+          <p style="margin-bottom: 18px;">Answer all questions correctly to complete this subsection.</p>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">1. The connectivity provider on Booking.com should be set to:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Direct API</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Manual XML</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> QuickConnect</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> SiteMinder</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="0">
+            <div class="quiz-q-text">2. The two rate plans every listing should have on Booking.com are:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Standard Rate (Flex 30) and Non-Refundable</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Refundable and Semi-Refundable</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Mobile Rate and Country Rate</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Genius Level 1 and Genius Level 2</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">3. With all promotions including Genius active, the markups for Standard Rate / Non-Refundable are:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 67% / 57%</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 85% / 75%</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 31% / 21%</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 100% / 90%</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="3">
+            <div class="quiz-q-text">4. Which Booking.com partner programme do we never join?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Genius</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Preferred Partner Programme</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> QuickConnect Partner</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Preferred Partner Programme PLUS</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">5. After running an LTD for 2 days, how long must you wait before re-activating it?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 24 hours</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 1 week</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 2 weeks</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 1 month</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">6. Which is true of Deep Deals?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> They stack with Genius and Targeting.</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> They must be at least 30% and don't stack with any other promotion, not even Genius.</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> They can be set to any percentage and stack with everything.</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> They only apply to mobile bookings.</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="submitQuiz('quiz3-2', 's3-2')">Submit Answers</button>
+          <div class="quiz-result" id="result-quiz3-2"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('s3-1')">← 3.1 Airbnb</button>
+          <button class="btn btn-primary" onclick="goTo('s3-3')">Next: 3.3 Listing Content →</button>
+        </div>
+      </section>
+
+      <!-- ========== 3.3 LISTING CONTENT BEST PRACTICES ========== -->
+      <section class="page" id="page-s3-3">
+        <div class="section-eyebrow">Section 3.3</div>
+        <h2>Listing Content Best Practices</h2>
+        <p class="lead">Photos get the click. Content closes the booking. Strong listing copy is honest, specific, and direct — and crucially, sounds nothing like every other rental on the platform. This section is our house style.</p>
+
+        <h3 style="margin-top: 32px;">Why This Matters</h3>
+        <p>Most rental copy is interchangeable. "Thoughtfully designed," "nestled in," "perfect blend of," "whether you're here for…" — readers skim past it because every other listing says the same thing. Distinctive, concrete writing performs measurably better.</p>
+
+        <h3 style="margin-top: 36px;">The Euphoric Leisure House Style</h3>
+
+        <div class="card-grid">
+          <div class="icon-card">
+            <div class="icon">◆</div>
+            <h4>Lead with the strongest concrete fact</h4>
+            <p>Don't open with mood. Open with what makes this property different — a distance, a feature, a layout, a view.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">▢</div>
+            <h4>Use section headers</h4>
+            <p>Living Space, Kitchen, Bedroom, Outdoor, Included. Headers help skim-readers find what they care about.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">⊟</div>
+            <h4>2–5 short, direct sentences per section</h4>
+            <p>If a paragraph is longer than five sentences, cut it. Short prose reads as confident.</p>
+          </div>
+          <div class="icon-card">
+            <div class="icon">⊘</div>
+            <h4>No em dashes</h4>
+            <p>They're a tell of AI-written copy. Use commas, full stops, or hyphens instead.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 36px;">Banned Words &amp; Phrases</h3>
+        <p>These words appear in almost every generic rental listing. They add no information. Avoid them.</p>
+
+        <div class="card">
+          <ul class="styled">
+            <li><strong>"Thoughtfully designed"</strong> — empty filler.</li>
+            <li><strong>"Seamlessly"</strong> — describes nothing concrete.</li>
+            <li><strong>"Nestled in / nestled among"</strong> — every cottage is "nestled."</li>
+            <li><strong>"Perfect blend of…"</strong> — meaningless.</li>
+            <li><strong>"Whether you're here for X, Y, or Z…"</strong> — try-too-hard sentence opener.</li>
+            <li><strong>Em dashes (—)</strong> — replace with commas or full stops.</li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top: 36px;">Fee Transparency</h3>
+        <p>Always disclose fees that aren't included in the nightly rate. Gate fees, conservation fees, environmental levies and similar charges are common in South African properties — disclose them as <strong>"payable on arrival"</strong>, not bundled into the price. Transparent pricing protects reviews.</p>
+
+        <h3 style="margin-top: 36px;">The 500-Character Rule</h3>
+        <div class="callout">
+          <div class="callout-title">Listing Description Limit</div>
+          <p>Airbnb's <strong>Listing description</strong> field caps at 500 characters. Track your character count as you write. This is the field guests see first — make every character count.</p>
+        </div>
+
+        <!-- BEFORE / AFTER EXAMPLES -->
+        <h3 style="margin-top: 40px;">Before &amp; After: Real Rewrites</h3>
+        <p>Three real Euphoric Leisure listings, before and after. Notice in each "After" how it leads with concrete fact, uses headers, drops filler, and reads like a person wrote it.</p>
+
+        <!-- Example 1 -->
+        <h4 style="margin-top: 26px;">Example 1 — Zimbali Suites 322</h4>
+        <div class="compare-grid">
+          <div class="compare-card before">
+            <div class="compare-label">Before</div>
+            <pre>Step inside and feel the calm.
+
+You wake up in a plush, inviting bed, soft light filtering through the blinds. The apartment is quiet — peaceful. You slip out of bed, brew your morning coffee in the sleek kitchen, and slide open the glass doors.
+
+Outside, your covered private patio waits. The greenery surrounds you. Birds in the distance. Fresh air on your skin…
+
+Inside, the space feels thoughtfully designed and modern. The separate lounge area gives you room to truly relax…
+
+Whether you're visiting for work, a weekend escape, or a longer stay, this apartment gives you the comfort of home with the feeling of retreat.</pre>
+          </div>
+          <div class="compare-card after">
+            <div class="compare-label">After</div>
+            <pre>Private, peaceful, practical — designed for real comfort.
+
+This modern one-bedroom apartment offers something rare: true quiet, your own outdoor space, and a layout that feels larger than it is.
+
+The Living Space
+The separate lounge area gives you room to unwind properly, not just a sofa next to a bed.
+
+The Kitchen
+Fully equipped with oven, microwave, fridge and essentials.
+
+The Bedroom
+A private, cozy bedroom with premium bedding for restful nights.
+
+The Patio
+The highlight. A covered private patio surrounded by greenery.
+
+Ideal for couples, remote workers, or guests who value privacy and calm over noise and crowds.</pre>
+          </div>
+        </div>
+
+        <!-- Example 2 -->
+        <h4 style="margin-top: 26px;">Example 2 — Mtunzi Park</h4>
+        <div class="compare-grid">
+          <div class="compare-card before">
+            <div class="compare-label">Before</div>
+            <pre>Step inside and feel the cool comfort of air-conditioning after a sun-soaked beach day. The space is thoughtfully laid out for families, friends, or golf groups looking for a relaxed coastal base.
+
+The open living area flows onto your private veranda, creating an easy indoor-outdoor rhythm to your stay…</pre>
+          </div>
+          <div class="compare-card after">
+            <div class="compare-label">After</div>
+            <pre>Real beach proximity. Real space. Real relaxation.
+
+This is not "near the beach." It's 40 metres from your door to the sand. Close enough to wander down barefoot, yet positioned inside a secure complex where you can properly switch off.
+
+Living &amp; Layout
+The open-plan living area is designed for easy coastal living. Air-conditioning keeps the space cool after long beach days.
+
+Sleeping Arrangements
+Bedroom 1 — 1 Queen + 1 Double bunk.
+Bedroom 2 — 1 Queen.
+
+Perfect for families, golf groups, or anyone who values location above all.</pre>
+          </div>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-title">Spot the Pattern</div>
+          <p>Every "After" version leads with a concrete fact (40 metres from the sand, true quiet, etc.). The "Before" versions lead with mood ("step inside and feel…"). Concrete fact beats atmosphere every time.</p>
+        </div>
+
+        <!-- Example 3 -->
+        <h4 style="margin-top: 26px;">Example 3 — Ocean Club A15</h4>
+        <div class="compare-grid">
+          <div class="compare-card before">
+            <div class="compare-label">Before</div>
+            <pre>Spend slow afternoons by the communal pool, cooling off under the sun or unwinding with a glass of wine as the air turns golden. Inside, clean lines, soft textures, and natural light create a peaceful rhythm that makes you instantly feel at home.
+
+Here, you don't just stay, you pause, breathe, and reconnect…</pre>
+          </div>
+          <div class="compare-card after">
+            <div class="compare-label">After</div>
+            <pre>Minimal, modern, and intentionally calm.
+
+Ocean Club A15 is designed for guests who value simplicity, light, and quiet comfort.
+
+The Space
+This bright open-plan studio blends sleeping, lounging, and dining into one seamless layout.
+
+Kitchenette
+Fully equipped: cooking basics, pots &amp; pans, dishes &amp; silverware, wine glasses, hot water kettle.
+
+Outdoor &amp; Estate Living
+Start your day in the private hanging chair with coffee in hand. Spend afternoons at the communal pool. Evenings are quiet and secure within the Ocean Club estate at Zimbali Lakes.
+
+Ideal for: couples, solo travellers, remote workers, or anyone seeking a clean, modern coastal base.</pre>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 40px;">Your Writing Checklist</h3>
+        <p>Before you publish any new listing copy, run through this list:</p>
+
+        <div class="card">
+          <ul class="styled">
+            <li>Opens with a concrete fact, not a mood.</li>
+            <li>Has section headers (Living, Kitchen, Bedroom, Outdoor, etc.).</li>
+            <li>Each section is 2–5 short sentences.</li>
+            <li>No em dashes anywhere.</li>
+            <li>None of the banned words and phrases above.</li>
+            <li>Listing description (the 500-char field) is under 500 characters.</li>
+            <li>Any payable-on-arrival fees are clearly disclosed.</li>
+            <li>Sounds like a person wrote it, not a generic template.</li>
+          </ul>
+        </div>
+
+        <!-- QUIZ -->
+        <div class="quiz-block" data-quiz="quiz3-3">
+          <div class="quiz-eyebrow">Knowledge Check</div>
+          <h3>Section 3.3 Quiz</h3>
+          <p style="margin-bottom: 18px;">Answer all questions correctly to complete this subsection.</p>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">1. The character limit on the Airbnb Listing description field is:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 250</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 400</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 500</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 1000</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="3">
+            <div class="quiz-q-text">2. Which of these phrases is BANNED from Euphoric Leisure listing copy?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> "40 metres from the sand."</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> "Bedroom 1 — 1 Queen bed."</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> "Fully equipped kitchen with oven, microwave, fridge."</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> "Thoughtfully designed and seamlessly nestled."</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">3. The right way to handle gate or conservation fees is:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Bundle them into the nightly rate without mentioning them.</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Disclose them clearly as payable on arrival.</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Mention them only after a guest books.</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Skip mentioning them — most guests won't notice.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">4. The strongest opening line for a listing description is one that:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Sets a romantic mood.</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Lists every amenity.</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Leads with the strongest concrete fact about the property.</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Asks the guest a rhetorical question.</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="submitQuiz('quiz3-3', 's3-3')">Submit Answers</button>
+          <div class="quiz-result" id="result-quiz3-3"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('s3-2')">← 3.2 Booking.com</button>
+          <button class="btn btn-primary" onclick="goTo('s4')">Next: Final Assessment →</button>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 4: FINAL ASSESSMENT ========== -->
+      <section class="page" id="page-s4">
+        <div class="section-eyebrow">Section 4 of 4</div>
+        <h2>Final Assessment</h2>
+        <p class="lead">Ten questions covering everything you've learned. You need <strong>8 out of 10 correct</strong> to pass and unlock your certificate. Take your time — there's no time limit, and you can retake the quiz as many times as you need.</p>
+
+        <div class="callout">
+          <div class="callout-title">A Quick Refresher Before You Begin</div>
+          <p>If a question stumps you, jump back to the relevant section using the sidebar. The course is built so you can move freely between modules. When you're ready, scroll down and submit.</p>
+        </div>
+
+        <div class="quiz-block" data-quiz="final" style="margin-top:32px;">
+          <div class="quiz-eyebrow">Final Assessment</div>
+          <h3>Onboarding &amp; Platform Specialist — Certification Quiz</h3>
+          <p style="margin-bottom: 18px;">Answer all 10 questions. You need 8 or more correct to pass.</p>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">1. Euphoric Leisure's curated booking platform is called:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> The Cape Collective</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> The Springbok Selection</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> The Pangolin Collection</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> The Zimbali Edit</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">2. When a new listing form arrives in Airtable, what's the FIRST thing you do?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Push it to Airbnb immediately.</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Set base and minimum prices in PriceLabs.</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Locate the property and change status to Pre-Onboarding.</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Create the Canva folder.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">3. The correct image dimension for Canva listing photos is:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 1024 × 768 px</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 2048 × 1365 px</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 1920 × 1080 px</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 4096 × 2160 px</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">4. The commission value entered in Boom Configuration is:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 17.25%</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 0.17</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 0.1725</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 1.725</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="2">
+            <div class="quiz-q-text">5. The recommended relationship between base price and minimum price in PriceLabs is:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Base = Minimum</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Base 5% above Minimum</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Base roughly 1.33× the Minimum (25–45% gap)</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Base 3× Minimum</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">6. What's the cancellation policy and Instant Book setting on every Airbnb listing?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Flexible / OFF</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Firm / ON</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Strict / OFF</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Super Strict / ON</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="0">
+            <div class="quiz-q-text">7. A NEW Airbnb listing transitions to the active 33% markup after how many bookings?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> 3</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> 1</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> 10</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> 25</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="1">
+            <div class="quiz-q-text">8. The two rate plans every Booking.com listing must have are:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Mobile Rate and Country Rate</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Standard Rate (Flex 30) and Non-Refundable</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> Genius Level 1 and Genius Level 2</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Refundable and Semi-Refundable</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="3">
+            <div class="quiz-q-text">9. Which Booking.com partner programme do we never join?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> Genius</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> Preferred Partner Programme</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> QuickConnect</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> Preferred Partner Programme PLUS</div>
+            </div>
+          </div>
+
+          <div class="quiz-question" data-correct="3">
+            <div class="quiz-q-text">10. Which sentence is MOST aligned with the Euphoric Leisure listing house style?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-idx="0"><span class="option-letter">A</span> "Thoughtfully designed and seamlessly nestled in nature, this is the perfect blend of comfort and style."</div>
+              <div class="quiz-option" data-idx="1"><span class="option-letter">B</span> "Whether you're here for work, weekend, or wellness — this is your dream escape."</div>
+              <div class="quiz-option" data-idx="2"><span class="option-letter">C</span> "Step inside and let the calm wash over you as the soft light filters in."</div>
+              <div class="quiz-option" data-idx="3"><span class="option-letter">D</span> "40 metres from the sand. Two queen bedrooms. Private veranda with braai."</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" onclick="submitFinal()">Submit Final Assessment</button>
+          <div class="quiz-result" id="result-final"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="goTo('s3-3')">← 3.3 Listing Content</button>
+          <button class="btn btn-primary" onclick="goTo('certificate')">View Certificate →</button>
+        </div>
+      </section>
+
+      <!-- ========== CERTIFICATE ========== -->
+      <section class="page" id="page-certificate">
+        <div class="section-eyebrow no-print">Course Complete</div>
+        <h2 class="no-print">Certificate of Completion</h2>
+        <p class="lead no-print">Once you've passed the final assessment, your certificate appears below with your name and today's date. Use the Print button to save it as a PDF or print a hard copy.</p>
+
+        <div class="certificate" id="certificate">
+          <img class="cert-logo-wrap" src="images/euphoric-leisure-logo.png" alt="Euphoric Leisure"
+               onerror="this.style.display='none';"/>
+          <div class="cert-title">Certificate of Completion</div>
+          <div class="cert-heading">Onboarding &amp;<br/>Platform Specialist</div>
+          <div class="cert-sub">Training Course</div>
+
+          <div class="cert-presented">This is to certify that</div>
+          <div class="cert-name" id="certName">[Your Name]</div>
+
+          <div class="cert-body">
+            has successfully completed the <strong>Euphoric Leisure Onboarding &amp; Platform Specialist Training Course</strong>, demonstrating proficiency in new listing onboarding, dynamic pricing setup, and platform optimization across Airbnb, Booking.com, and LekkerGuest.
+          </div>
+
+          <div class="cert-footer">
+            <div class="cert-sig">
+              <div class="cert-sig-line"></div>
+              <div class="cert-sig-name" id="certDate">[Date]</div>
+              <div class="cert-sig-role">Date of Completion</div>
+            </div>
+            <div class="cert-sig">
+              <div class="cert-sig-line"></div>
+              <div class="cert-sig-name">Euphoric Leisure</div>
+              <div class="cert-sig-role">Training &amp; Development</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-buttons no-print">
+          <button class="btn btn-secondary" onclick="goTo('s4')">← Final Assessment</button>
+          <button class="btn btn-primary" onclick="window.print()">Print / Save as PDF ⬇</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  // ============= STATE =============
+  const state = {
+    completed: new Set(),
+    name: '',
+    finalPassed: false,
+  };
+
+  const trackable = ['s1','s2-1','s2-2','s2-3','s3-1','s3-2','s3-3','s4'];
+
+  // ============= NAVIGATION =============
+  function goTo(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + page);
+    if (target) target.classList.add('active');
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    const link = document.querySelector('.nav-item[data-page="' + page + '"]');
+    if (link) link.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (window.innerWidth < 980) document.getElementById('sidebar').classList.remove('open');
+  }
+
+  document.querySelectorAll('.nav-item[data-page]').forEach(item => {
+    item.addEventListener('click', () => goTo(item.dataset.page));
+  });
+
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+  }
+
+  // ============= START =============
+  function startCourse() {
+    const name = document.getElementById('learnerName').value.trim();
+    if (name) {
+      state.name = name;
+      document.getElementById('certName').textContent = name;
+    }
+    goTo('s1');
+  }
+
+  // ============= QUIZ HANDLING =============
+  document.querySelectorAll('.quiz-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      const question = opt.closest('.quiz-question');
+      question.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+    });
+  });
+
+  function gradeQuiz(quizId) {
+    const block = document.querySelector('[data-quiz="' + quizId + '"]');
+    const questions = block.querySelectorAll('.quiz-question');
+    let correct = 0;
+    let total = questions.length;
+    let unanswered = false;
+    questions.forEach(q => {
+      const correctIdx = parseInt(q.dataset.correct);
+      const selected = q.querySelector('.quiz-option.selected');
+      if (!selected) { unanswered = true; return; }
+      const idx = parseInt(selected.dataset.idx);
+      q.querySelectorAll('.quiz-option').forEach(o => {
+        o.classList.remove('correct','incorrect');
+      });
+      if (idx === correctIdx) {
+        selected.classList.add('correct');
+        correct++;
+      } else {
+        selected.classList.add('incorrect');
+        const right = q.querySelector('.quiz-option[data-idx="' + correctIdx + '"]');
+        if (right) right.classList.add('correct');
+      }
+    });
+    return { correct, total, unanswered };
+  }
+
+  function submitQuiz(quizId, sectionId) {
+    const result = gradeQuiz(quizId);
+    const el = document.getElementById('result-' + quizId);
+    if (result.unanswered) {
+      el.className = 'quiz-result show fail';
+      el.innerHTML = '<strong>Hold on —</strong> please answer every question before submitting.';
+      return;
+    }
+    if (result.correct === result.total) {
+      el.className = 'quiz-result show pass';
+      el.innerHTML = '<strong>Wonderful — ' + result.correct + '/' + result.total + ' correct.</strong> This section is now marked complete.';
+      markComplete(sectionId);
+    } else {
+      el.className = 'quiz-result show fail';
+      el.innerHTML = '<strong>' + result.correct + '/' + result.total + ' correct.</strong> Take another look at the highlighted answers and try again.';
+    }
+  }
+
+  function submitFinal() {
+    const result = gradeQuiz('final');
+    const el = document.getElementById('result-final');
+    if (result.unanswered) {
+      el.className = 'quiz-result show fail';
+      el.innerHTML = '<strong>Almost there —</strong> please answer every question before submitting.';
+      return;
+    }
+    if (result.correct >= 8) {
+      el.className = 'quiz-result show pass';
+      el.innerHTML = '<strong>Congratulations — ' + result.correct + '/' + result.total + ' correct.</strong> You\'ve passed the final assessment! Your certificate is ready in the next page.';
+      markComplete('s4');
+      state.finalPassed = true;
+      const today = new Date();
+      const dateStr = today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+      document.getElementById('certDate').textContent = dateStr;
+    } else {
+      el.className = 'quiz-result show fail';
+      el.innerHTML = '<strong>' + result.correct + '/' + result.total + ' correct.</strong> You need 8 or more to pass. Review the highlighted answers and give it another go.';
+    }
+  }
+
+  // ============= PROGRESS =============
+  function markComplete(sectionId) {
+    state.completed.add(sectionId);
+    const navItem = document.querySelector('.nav-item[data-page="' + sectionId + '"]');
+    if (navItem) navItem.classList.add('completed');
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const done = trackable.filter(s => state.completed.has(s)).length;
+    const pct = Math.round((done / trackable.length) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressPercent').textContent = pct + '%';
+  }
+
+  // Initial: highlight Home in nav
+  document.querySelector('.nav-item[data-page="home"]').classList.add('active');
+</script>
+
+</body>
+</html>
